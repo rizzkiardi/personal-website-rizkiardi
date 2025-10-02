@@ -1,0 +1,28 @@
+/* dark mode */
+/* progress bar */
+#nprogress .bar {
+  background: #ffffff !important;
+  height: 2px !important;
+}
+
+/* Efek glow/peg */
+#nprogress .peg {
+  box-shadow: 0 0 10px #ffffff, 0 0 5px #ffffff !important;
+}
+
+/* Warna spinner  */
+#nprogress .spinner-icon {
+  border-top-color: #ffffff !important;
+  border-left-color: #ffffff !important;
+}
+
+/* light mode */
+/* progress bar (light mode) */
+html:not(.dark) #nprogress .bar {
+  background: #191919 !important;
+  height: 2px !important;
+}
+
+html:not(.dark) #nprogress .peg {
+  box-shadow: 0 0 10px #191919, 0 0 5px #191919 !important;
+}
