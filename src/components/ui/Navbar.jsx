@@ -112,7 +112,6 @@ const Navbar = () => {
                 <img
                   src={isDark ? assets.download_light : assets.download_dark}
                   alt="Icon Download"
-                  className=""
                 />
                 Resume
               </a>
@@ -188,7 +187,6 @@ const Navbar = () => {
               <img
                 src={isDark ? assets.download_light : assets.download_dark}
                 alt="Icon Download"
-                className=""
               />
               Resume
             </a>

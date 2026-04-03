@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import { Particles } from "../magicui/particles";
-import { ShimmerButton } from "../magicui/shimmer-button";
 import CertificateModal from "../ui/CertificateModal";
 import Footer from "../ui/Footer";
 import Navbar from "../ui/Navbar";
@@ -73,7 +72,7 @@ const MyCertificateCard = ({ name, img }) => {
       <figure
         onClick={() => setIsOpen(true)}
         className={cn(
-          "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl p-3"
+          "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl p-3",
         )}
       >
         <div className="flex flex-row items-center gap-2">
@@ -121,7 +120,7 @@ const MyCertificateCard = ({ name, img }) => {
             </motion.div>
           )}
         </AnimatePresence>,
-        document.body
+        document.body,
       )}
     </>
   );
@@ -150,7 +149,7 @@ const About = () => {
 
         <div className="about max-w-6xl mx-auto my-20 flex flex-col-2 gap-6 items-center justify-center text-[#e4e4e4]/80 md:flex max-md:flex-col max-lg:px-6">
           {/* Gambar profile animate */}
-          <div className="flex-1 flex-col justify-items-center">
+          <div className="flex-1 flex-col justify-items-center space-y-7">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
@@ -162,13 +161,23 @@ const About = () => {
               }}
               className="relative rounded-full"
             >
-              <img
-                src={assets.rizkiardi_transparent}
-                className="rounded-full max-md:w-[300px]"
-                alt="Picture rizkiardi"
-                width="400"
-                loading="eager"
-              />
+              <picture>
+                <source
+                  srcSet={assets.rizkiardi_img_webp}
+                  type="image/webp"
+                  className="rounded-full max-md:w-[200px]"
+                  alt="Picture rizkiardi"
+                  width="250"
+                  loading="eager"
+                />
+                <img
+                  src={assets.rizkiardi_img}
+                  className="rounded-full max-md:w-[200px]"
+                  alt="Picture rizkiardi"
+                  width="250"
+                  loading="eager"
+                />
+              </picture>
             </motion.div>
 
             <motion.div
@@ -182,23 +191,22 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <ShimmerButton className="flex gap-3 max-md:py-2 py-2 px-10 text-[#FFFFFF] dark:text-[#e4e4e4]/80 dark:bg-transparent">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-mail"
-                  >
-                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                  </svg>
-                  Hire me
-                </ShimmerButton>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail-icon lucide-mail"
+                  className="text-black dark:text-[#FFFFFF]"
+                >
+                  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                </svg>
               </a>
               <a
                 href="https://github.com/rizzkiardi"

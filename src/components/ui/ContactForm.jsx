@@ -91,7 +91,7 @@ export default function ContactForm() {
         <ShimmerButton
           type="submit"
           disabled={isSubmitting}
-          className="grid w-full max-w-sm mx-auto my-5 py-2 text-[#FFFFFF] dark:text-[#e4e4e4]/80 dark:bg-white "
+          className="grid w-full max-w-sm mx-auto my-5 py-2 text-[#FFFFFF] dark:text-[#e4e4e4]/80"
         >
           {isSubmitting ? "Sending..." : "Send"}
         </ShimmerButton>

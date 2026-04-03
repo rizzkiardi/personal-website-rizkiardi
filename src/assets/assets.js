@@ -19,7 +19,8 @@ import download_dark from "./icons/download-line-dark.png";
 import logo_light from "./images/logo-rizkiardi-light.png";
 import logo_dark from "./images/logo-rizkiardi-dark.png";
 import rizkiardi_img from "./images/rizkiardi.png";
-import ppdb1 from "./images/ppdb-1.png";
+import rizkiardi_img_webp from "./images/rizkiardi.webp";
+import ppdb1 from "./images/ppdb-1.webp";
 import ppdb2 from "./images/ppdb-2.png";
 import ppdb3 from "./images/ppdb-3.png";
 import ppdb4 from "./images/ppdb-4.png";
@@ -36,6 +37,7 @@ import tokobit from "./images/TokoBit-app.png";
 import linkedin_light from "./icons/LinkedIn-light.png";
 import linkedin_dark from "./icons/LinkedIn-dark.png";
 import rizkiardi_transparent from "./images/rizkiardi-transparent.png";
+import rizkiardi_transparent_webp from "./images/rizkiardi-transparent.webp";
 import hacktiv8_logo from "./images/hacktiv8-logo.jpg";
 import dicoding_logo from "./images/dicoding_logo.jpg";
 import bangkit_logo from "./images/bangkit_academy_logo.jpg";
@@ -74,6 +76,7 @@ export const assets = {
   download_light,
   download_dark,
   rizkiardi_img,
+  rizkiardi_img_webp,
 
   ppdb1,
   ppdb2,
@@ -94,6 +97,7 @@ export const assets = {
   linkedin_light,
   linkedin_dark,
   rizkiardi_transparent,
+  rizkiardi_transparent_webp,
   hacktiv8_logo,
   dicoding_logo,
   bangkit_logo,
