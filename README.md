@@ -1,4 +1,4 @@
-# 🌐 Rizki Ardi - Personal Website
+# Rizki Ardi - Personal Website
 
 Personal portfolio website of Rizki Ardi, built with React, Vite, and Tailwind CSS.
 Features include responsive design, dark mode, resume download, contact page, and sections showcasing projects, skills, and work experience.
