@@ -281,41 +281,55 @@ const About = () => {
                 Tools I use
               </p>
               <div className="flex flex-wrap gap-3 max-lg:gap-2">
-                <img src={assets.html5} alt="Logo HTML5" className="w-[50px]" />
-                <img src={assets.css3} alt="Logo CSS3" className="w-[50px]" />
+                <img
+                  src={assets.html5}
+                  alt="Logo HTML5"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
+                />
+                <img
+                  src={assets.css3}
+                  alt="Logo CSS3"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
+                />
                 <img
                   src={assets.javascript}
                   alt="Logo JavaScript"
-                  className="w-[50px]"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
                 />
-
                 <img
                   src={assets.tailwindcss}
                   alt="Logo TailwindCSS"
-                  className="w-[50px]"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
                 />
                 <img
                   src={assets.typescript}
                   alt="Logo TypeScript"
-                  className="w-[50px]"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
                 />
-                <img src={assets.vite} alt="Logo Vite" className="w-[50px]" />
-                <img src={assets.react} alt="Logo React" className="w-[50px]" />
                 <img
-                  src={isDark ? assets.github_light : assets.github_dark}
-                  alt="Logo GitHub"
-                  className="w-[50px]"
+                  src={assets.vite}
+                  alt="Logo Vite"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
                 />
-
+                <img
+                  src={assets.react}
+                  alt="Logo React"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
+                />
                 <img
                   src={assets.nextjs_white}
                   alt="Logo Next JS"
-                  className="w-[50px]"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
+                />
+                <img
+                  src={isDark ? assets.github_light : assets.github_dark}
+                  alt="Logo GitHub"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
                 />
                 <img
                   src={assets.laravel}
                   alt="Logo Laravel"
-                  className="w-[50px]"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
                 />
               </div>
             </motion.div>

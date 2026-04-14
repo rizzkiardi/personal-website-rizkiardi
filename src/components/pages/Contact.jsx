@@ -14,7 +14,7 @@ const Contact = () => {
         {/* shadow */}
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 rounded-full bg-gradient-to-b from-white/30 to-transparent blur-3xl"></div>
 
-        <div className="my-30 flex justify-center items-center mx-6">
+        <div className="mb-30 md:my-30 flex justify-center items-center mx-6">
           <div className="w-full max-w-4xl mx-6 md:mx-0 md:flex md:items-center md:gap-10">
             <div className="w-full md:w-[40%] my-14 md:my-10">
               <h2
