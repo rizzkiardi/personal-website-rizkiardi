@@ -9,6 +9,7 @@ import { Particles } from "../magicui/particles";
 import CertificateModal from "../ui/CertificateModal";
 import Footer from "../ui/Footer";
 import Navbar from "../ui/Navbar";
+import { GitHubCalendar } from "react-github-calendar";
 
 const myCertificate = [
   {
@@ -334,6 +335,18 @@ const About = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+
+        <div className="max-lg:px-6 w-full flex justify-center mt-10 mb-20">
+          {typeof window !== "undefined" && (
+            <GitHubCalendar
+              username="rizzkiardi"
+              blockSize={14}
+              blockMargin={4}
+              fontSize={14}
+              colorScheme={isDark ? "dark" : "light"}
+            />
+          )}
         </div>
 
         {/* Start MSIB */}
