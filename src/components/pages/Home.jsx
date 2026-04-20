@@ -135,7 +135,7 @@ const Home = () => {
               target="_blank"
               className="w-[200px] transform transition-transform duration-300 hover:scale-110 max-md:my-5"
             >
-              <ShimmerButton className="flex justify-center gap-3 py-3 max-md:py-2 text-[#FFFFFF] dark:text-[#e4e4e4]/80 dark:bg-transparent w-full">
+              <ShimmerButton className="flex justify-center gap-3 py-3 max-md:py-2 text-[#FFFFFF] dark:text-[#e4e4e4]/80 dark:bg-transparent w-full shadow-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -160,7 +160,7 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 1 }}
               href="https://www.linkedin.com/in/rizkiardi/"
               target="_blank"
-              className="w-[200px] transform transition-transform duration-300 hover:scale-110 max-md:my-5"
+              className="w-[200px] transform transition-transform duration-300 hover:scale-110 max-md:my-5 shadow-lg rounded-lg"
             >
               <span className="flex justify-center py-3 max-md:py-2 text-[#191919] dark:text-[#e4e4e4]/80 border border-slate-500 dark:border-[#e4e4e4]/80 rounded-lg w-full">
                 View LinkedIn
@@ -233,12 +233,13 @@ const Home = () => {
                 <div
                   key={index}
                   className={`
-                ${index === 0 ? "xl:col-span-3 xl:row-span-2" : ""}
-                ${index === 1 ? "xl:col-span-3 xl:row-span-2 xl:col-start-4" : ""}
-                ${index === 2 ? "xl:col-span-2 xl:row-span-2 xl:row-start-3" : ""}
-                ${index === 3 ? "xl:col-span-2 xl:row-span-2 xl:col-start-3 xl:row-start-3" : ""}
-                ${index === 4 ? "xl:col-span-2 xl:row-span-2 xl:col-start-5 xl:row-start-3" : ""}
-              `}
+                    h-full flex
+                    ${index === 0 ? "xl:col-span-3 xl:row-span-2" : ""}
+                    ${index === 1 ? "xl:col-span-3 xl:row-span-2 xl:col-start-4" : ""}
+                    ${index === 2 ? "xl:col-span-2 xl:row-span-2 xl:row-start-3" : ""}
+                    ${index === 3 ? "xl:col-span-2 xl:row-span-2 xl:col-start-3 xl:row-start-3" : ""}
+                    ${index === 4 ? "xl:col-span-2 xl:row-span-2 xl:col-start-5 xl:row-start-3" : ""}
+                  `}
                 >
                   <ProjectCard {...project} />
                 </div>
