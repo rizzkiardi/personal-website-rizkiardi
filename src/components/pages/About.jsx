@@ -108,7 +108,7 @@ const MyCertificateCard = ({ name, img }) => {
                 />
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="absolute flex items-center -top-8 right-0 border text-white px-2 py-0 lg:px-3 rounded-sm transition"
+                  className="absolute flex items-center -top-8 right-0 border text-white px-2 py-0 lg:px-3 rounded-sm transition cursor-pointer"
                 >
                   <img
                     className="w-5 lg:w-6"

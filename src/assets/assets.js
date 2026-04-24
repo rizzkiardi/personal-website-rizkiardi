@@ -31,7 +31,7 @@ import klinik_sanvita2 from "./images/klinik-sanvita-medika2.png";
 import klinik_sanvita3 from "./images/klinik-sanvita-medika3.png";
 import klinik_sanvita4 from "./images/klinik-sanvita-medika4.png";
 import klinik_sanvita5 from "./images/klinik-sanvita-medika5.png";
-import calculator_app from "./images/Calculator App.png";
+import myBlog from "./images/myBlog.webp";
 import js_documentation from "./images/JS Documentation-layout.png";
 import tokobit from "./images/TokoBit-app.png";
 import linkedin_light from "./icons/LinkedIn-light.png";
@@ -90,7 +90,7 @@ export const assets = {
   klinik_sanvita4,
   klinik_sanvita5,
   tokobit,
-  calculator_app,
+  myBlog,
   js_documentation,
   github_light,
   github_dark,
@@ -225,13 +225,13 @@ export const projects = [
   },
 
   {
-    img: [assets.calculator_app],
-    nameProjects: "Calculator App",
+    img: [assets.myBlog],
+    nameProjects: "myBlog",
     description:
-      "Simple Calculator is a modern calculator app designed to simplify everyday calculations quickly, accurately, and practically. With a simple interface and intuitive features, users can perform various calculations efficiently anywhere, anytime.",
+      "myBlog is a personal website built with HTML, CSS, and JavaScript that presents content structured by category, featuring a responsive layout and optimal user interaction.",
     techStack: ["HTML5", "CSS3", "JavaScript"],
-    linkGithub: "https://github.com/rizzkiardi/calculator-app",
-    livePreview: "https://kalkulator-website.vercel.app/",
+    linkGithub: "https://github.com/rizzkiardi/my-blog.git",
+    livePreview: "https://my-blog-rizkiardi.vercel.app/",
   },
   {
     img: [assets.js_documentation],

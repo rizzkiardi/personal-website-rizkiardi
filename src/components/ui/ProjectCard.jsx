@@ -106,7 +106,7 @@ const ProjectCard = ({
               {/* Button Close */}
               <button
                 onClick={handleCloseModal}
-                className="absolute flex items-center -top-8 right-0 border text-white px-2 py-0 lg:px-3 rounded-sm transition"
+                className="absolute flex items-center -top-8 right-0 border text-white px-2 py-0 lg:px-3 rounded-sm transition cursor-pointer"
               >
                 <img className="w-5 lg:w-6" src={assets.cross_orange} alt="" />
                 <span className="mr-2 text-sm">Close</span>
