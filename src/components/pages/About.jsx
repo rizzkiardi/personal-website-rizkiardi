@@ -507,7 +507,7 @@ const About = () => {
                     <img
                       src={assets.daihatsu_logo}
                       alt="Logo Astra Daihatsu Motor"
-                      className="w-[75px] md:w-[100px]"
+                      className="w-[75px] max-md:w-[150px] md:w-[200px]"
                     />
                     <div className="flex flex-col">
                       <p className="text-md font-semibold">
@@ -530,6 +530,27 @@ const About = () => {
                       Maret 2018 - February 2020
                     </p>
                   </div>
+                </div>
+                <div
+                  className=""
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  data-aos-once="true"
+                >
+                  <button
+                    onClick={() => setActiveCertificate("adm")}
+                    className="mb-3 w-[100px] rounded-sm border hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
+                  >
+                    Certificate
+                  </button>
+                  {activeCertificate === "adm" && (
+                    <CertificateModal
+                      src={assets.adm_certificate}
+                      isOpen={true}
+                      onClose={() => setActiveCertificate(null)}
+                    />
+                  )}
                 </div>
                 {/* description */}
                 <div
@@ -571,7 +592,7 @@ const About = () => {
                     <img
                       src={assets.yamaha_logo}
                       alt="Logo Yamaha Motor"
-                      className="w-[75px] md:w-[100px]"
+                      className="w-[75px] max-md:w-[150px] md:w-[200px]"
                     />
                     <div className="flex flex-col">
                       <p className="text-md font-semibold">
@@ -594,6 +615,28 @@ const About = () => {
                     </p>
                   </div>
                 </div>
+                <div
+                  className=""
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  data-aos-once="true"
+                >
+                  <button
+                    onClick={() => setActiveCertificate("yimm")}
+                    className="mb-3 w-[100px] rounded-sm border hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
+                  >
+                    Certificate
+                  </button>
+                  {activeCertificate === "yimm" && (
+                    <CertificateModal
+                      src={assets.yimm_certificate}
+                      isOpen={true}
+                      onClose={() => setActiveCertificate(null)}
+                    />
+                  )}
+                </div>
+
                 {/* description */}
                 <div
                   className="mb-5"

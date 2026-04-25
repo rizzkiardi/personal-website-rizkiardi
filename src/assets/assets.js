@@ -46,6 +46,8 @@ import yamaha_logo from "./images/YamahaMotor-logo.png";
 import hacktiv8_certificate from "/certificates/Sertifikat IBM Wave 5 - Rizki Septi Ardi.pdf";
 import bangkit_certificate from "/certificates/[Bangkit 2024 Batch 2] Certificate - C264B4KY3916.pdf";
 import sib_certificate from "/certificates/[SIB Cycle 5] Sertifikat - F264YB259.pdf";
+import adm_certificate from "/certificates/PT Astra Daihatsu Motor.pdf";
+import yimm_certificate from "/certificates/PT Yamaha Indonesia Motor Manufacturing.pdf";
 
 import sertifikat_dasar_pemrograman from "./images/Sertifikat - Memulai Dasar Pemrograman untuk Menjadi Pengembang Software.jpg";
 import sertifikat_solo_learn from "./images/CERTIFICATE Solo Learn - Web Development.jpg";
@@ -106,6 +108,8 @@ export const assets = {
   hacktiv8_certificate,
   bangkit_certificate,
   sib_certificate,
+  adm_certificate,
+  yimm_certificate,
   eye_light,
   eye_dark,
   cross_orange,
