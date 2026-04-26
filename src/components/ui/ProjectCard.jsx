@@ -90,7 +90,7 @@ const ProjectCard = ({
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="relative w-full max-w-6xl h-auto"
+              className="relative w-full max-w-6xl h-auto rounded-lg max-lg:px-6"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -99,14 +99,14 @@ const ProjectCard = ({
             >
               <img
                 src={currentImg}
-                alt="Full"
+                alt={`Preview screenshot ${nameProjects}`}
                 className="w-full h-full rounded-lg shadow-lg"
               />
 
               {/* Button Close */}
               <button
                 onClick={handleCloseModal}
-                className="absolute flex items-center -top-8 right-0 border text-white px-2 py-0 lg:px-3 rounded-sm transition cursor-pointer"
+                className="absolute flex items-center -top-8 right-0 border text-white px-2 py-0 lg:px-3 rounded-sm transition max-lg:right-6 cursor-pointer"
               >
                 <img className="w-5 lg:w-6" src={assets.cross_orange} alt="" />
                 <span className="mr-2 text-sm">Close</span>

@@ -15,29 +15,31 @@ const CertificateModal = ({ src, onClose }) => {
         transition={{ duration: 0.3 }}
       >
         <motion.div
-          className="relative w-full max-w-6xl h-[90vh]"
+          className="relative flex items-center justify-center w-full max-lg:px-6"
           onClick={(e) => e.stopPropagation()}
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <iframe
-            src={src}
-            className="w-full h-full rounded-lg shadow-lg"
-            title="Certificate"
-          />
-          <button
-            onClick={onClose}
-            className="absolute flex items-center -top-8 right-0 border text-white px-2 py-0 lg:px-3 rounded-sm transition cursor-pointer"
-          >
+          <div className="relative inline-block">
             <img
-              className="w-5 lg:w-6"
-              src={assets.cross_orange}
-              alt="Icon close"
+              src={src}
+              className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-lg"
+              title="Certificate"
             />
-            <span className="mr-2 text-sm">Close</span>
-          </button>
+            <button
+              onClick={onClose}
+              className="absolute flex items-center -top-8 right-0 border text-white px-2 py-0 lg:px-3 rounded-sm transition cursor-pointer"
+            >
+              <img
+                className="w-5 lg:w-6"
+                src={assets.cross_orange}
+                alt="Icon close"
+              />
+              <span className="mr-2 text-sm">Close</span>
+            </button>
+          </div>
         </motion.div>
       </motion.div>
     </AnimatePresence>

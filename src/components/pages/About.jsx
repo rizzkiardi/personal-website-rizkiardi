@@ -10,6 +10,7 @@ import CertificateModal from "../ui/CertificateModal";
 import Footer from "../ui/Footer";
 import Navbar from "../ui/Navbar";
 import { GitHubCalendar } from "react-github-calendar";
+import { ShieldCheck } from "lucide-react";
 
 const myCertificate = [
   {
@@ -94,29 +95,31 @@ const MyCertificateCard = ({ name, img }) => {
               transition={{ duration: 0.25 }}
             >
               <motion.div
-                className="relative w-full max-w-6xl h-auto"
+                className="relative flex items-center justify-center w-full max-lg:px-6"
                 onClick={(e) => e.stopPropagation()}
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
                 transition={{ duration: 0.25 }}
               >
-                <img
-                  src={img}
-                  alt={name}
-                  className="w-full h-full rounded-lg shadow-lg"
-                />
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="absolute flex items-center -top-8 right-0 border text-white px-2 py-0 lg:px-3 rounded-sm transition cursor-pointer"
-                >
+                <div className="relative inline-block">
                   <img
-                    className="w-5 lg:w-6"
-                    src={assets.cross_orange}
-                    alt=""
+                    src={img}
+                    alt={name}
+                    className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-lg"
                   />
-                  <span className="mr-2 text-sm">Close</span>
-                </button>
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="absolute flex items-center -top-8 right-0 border text-white px-2 py-0 lg:px-3 rounded-sm transition cursor-pointer"
+                  >
+                    <img
+                      className="w-5 lg:w-6"
+                      src={assets.cross_orange}
+                      alt="Icon Close"
+                    />
+                    <span className="mr-2 text-sm">Close</span>
+                  </button>
+                </div>
               </motion.div>
             </motion.div>
           )}
@@ -252,7 +255,7 @@ const About = () => {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-md text-start underline decoration decoration-[#FCCA46] text-[#191919] dark:text-[#e4e4e4]/80"
+              className="text-md text-start underline decoration decoration-[#F6A32D] text-[#191919] dark:text-[#e4e4e4]/80"
             >
               Web Developer | Undergraduate Information Technology
             </motion.h2>
@@ -353,7 +356,7 @@ const About = () => {
         <section className="w-full bg-[#2D2D2D] py-20">
           <div className="max-w-6xl mx-auto max-lg:px-6">
             <h2
-              className="text-white text-2xl font-semibold text-start underline decoration-2 decoration-[#FCCA46]
+              className="text-white text-2xl font-semibold text-start underline decoration-2 decoration-[#F6A32D]
             "
               data-aos="fade-up"
               data-aos-duration="1000"
@@ -376,7 +379,7 @@ const About = () => {
                   <img
                     src={assets.bangkit_logo}
                     alt="Logo Bangkit"
-                    className="w-[75px] md:w-[100px]"
+                    className="w-[100px] md:w-[125px]"
                   />
 
                   <div className="flex flex-col">
@@ -384,17 +387,20 @@ const About = () => {
                       Bangkit Academy 2024 Batch 2 - Cloud Computing Cohort
                     </p>
                     <p className="text-sm mb-1">Student</p>
-
-                    {/* Years untuk mobile */}
-                    <p className="text-sm mt-1">August 2024 - December 2024</p>
+                    <div className="flex lg:items-center gap-3 max-md:flex max-md:flex-col">
+                      <p className="text-sm mt-1">
+                        August 2024 - December 2024
+                      </p>
+                      <button
+                        onClick={() => setActiveCertificate("bangkit")}
+                        className="flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm rounded-sm hover:shadow-lg shadow-lg transition-transform hover:scale-105 cursor-pointer border border-[#434444]"
+                      >
+                        <ShieldCheck color="#F6A32D" />
+                        Certificate
+                      </button>
+                    </div>
                   </div>
                 </div>
-                <button
-                  onClick={() => setActiveCertificate("bangkit")}
-                  className="w-[100px] rounded-sm border hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
-                >
-                  Certificate
-                </button>
 
                 {/* description */}
                 <details className="group mb-5 ">
@@ -434,24 +440,25 @@ const About = () => {
                   <img
                     src={assets.dicoding_logo}
                     alt="Logo Dicoding"
-                    className="w-[75px] md:w-[100px]"
+                    className="w-[100px] md:w-[125px]"
                   />
                   <div className="flex flex-col">
                     <p className="text-md font-semibold">
                       Pengembang FrontEnd Web dan BackEnd
                     </p>
                     <p className="text-sm mb-1">Student</p>
-                    {/* Years untuk mobile */}
-                    <p className="text-sm mt-1 ">July 2023 - December 2023</p>
+                    <div className="flex lg:items-center gap-3 max-md:flex max-md:flex-col">
+                      <p className="text-sm mt-1">July 2023 - December 2023</p>
+                      <button
+                        onClick={() => setActiveCertificate("sib")}
+                        className="flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm rounded-sm hover:shadow-lg shadow-lg transition-transform hover:scale-105 cursor-pointer border border-[#434444]"
+                      >
+                        <ShieldCheck color="#F6A32D" />
+                        Certificate
+                      </button>
+                    </div>
                   </div>
                 </div>
-
-                <button
-                  onClick={() => setActiveCertificate("sib")}
-                  className="w-[100px] rounded-sm border hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
-                >
-                  Certificate
-                </button>
 
                 {/* description */}
                 <details className="group mb-5">
@@ -485,7 +492,7 @@ const About = () => {
             {/* Work Experience */}
             <div className="mt-20">
               <h2
-                className="text-white text-2xl font-semibold text-start underline decoration-2 decoration-[#FCCA46]"
+                className="text-white text-2xl font-semibold text-start underline decoration-2 decoration-[#F6A32D]"
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-once="true"
@@ -532,7 +539,7 @@ const About = () => {
                   </div>
                 </div>
                 <div
-                  className=""
+                  className="md:ml-[214px] md:mt-[-32px]"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="300"
@@ -540,8 +547,9 @@ const About = () => {
                 >
                   <button
                     onClick={() => setActiveCertificate("adm")}
-                    className="mb-3 w-[100px] rounded-sm border hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
+                    className="flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm mb-3 rounded-sm hover:shadow-lg shadow-lg transition-transform hover:scale-105 cursor-pointer border border-[#434444]"
                   >
+                    <ShieldCheck color="#F6A32D" />
                     Certificate
                   </button>
                   {activeCertificate === "adm" && (
@@ -601,7 +609,6 @@ const About = () => {
                       <p className="text-sm mb-1">
                         Production Operator - Engine Assy Production
                       </p>
-                      {/* Years untuk mobile */}
                       <p className="text-sm mt-1 md:hidden">
                         January 2015 - December 2016
                       </p>
@@ -616,7 +623,7 @@ const About = () => {
                   </div>
                 </div>
                 <div
-                  className=""
+                  className="md:ml-[214px] md:mt-[-32px]"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="300"
@@ -624,8 +631,9 @@ const About = () => {
                 >
                   <button
                     onClick={() => setActiveCertificate("yimm")}
-                    className="mb-3 w-[100px] rounded-sm border hover:shadow-lg transition-transform hover:scale-105 cursor-pointer"
+                    className="flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm mb-3 rounded-sm hover:shadow-lg shadow-lg transition-transform hover:scale-105 cursor-pointer border border-[#434444]"
                   >
+                    <ShieldCheck color="#F6A32D" />
                     Certificate
                   </button>
                   {activeCertificate === "yimm" && (
@@ -671,7 +679,7 @@ const About = () => {
           <div className="w-full max-w-6xl mx-auto px-0">
             <div className="">
               <h2
-                className="dark:text-white text-[#191919] text-2xl font-semibold text-end underline decoration-2 decoration-[#FCCA46] px-6 lg:px-0 mb-5"
+                className="dark:text-white text-[#191919] text-2xl font-semibold text-end underline decoration-2 decoration-[#F6A32D] px-6 lg:px-0 mb-5"
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-once="true"

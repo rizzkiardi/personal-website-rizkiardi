@@ -180,7 +180,7 @@ const Home = () => {
               data-aos-duration="1000"
               data-aos-once="true"
             >
-              <span className="underline decoration-[#FCCA46] mr-2">
+              <span className="underline decoration-2 decoration-[#F6A32D] mr-2">
                 Technology
               </span>
               Stack
@@ -218,7 +218,7 @@ const Home = () => {
               data-aos-once="true"
             >
               My
-              <span className="underline decoration-[#FCCA46] ml-2">
+              <span className="underline decoration-2 decoration-[#F6A32D] ml-2">
                 Projects
               </span>
             </h2>

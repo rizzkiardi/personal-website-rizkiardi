@@ -24,7 +24,7 @@ const Projects = () => {
             data-aos-once="true"
           >
             My
-            <span className="underline decoration-[#FCCA46] ml-2">
+            <span className="underline decoration-2 decoration-[#F6A32D] ml-2">
               Projects
             </span>
           </h1>

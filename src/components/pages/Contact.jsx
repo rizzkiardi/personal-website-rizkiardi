@@ -24,8 +24,8 @@ const Contact = () => {
                 data-aos-once="true"
               >
                 <span className="">Get in Touch,</span>
-                <span className="block md:underline md:decoration-[#FCCA46]">
-                  Let's Work Together.
+                <span className="block underline decoration-2 decoration-[#F6A32D]">
+                  Let's Work Together
                 </span>
               </h2>
             </div>
