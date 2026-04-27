@@ -89,7 +89,7 @@ const Home = () => {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className=" text-sm text-center my-3 md:text-md lg:text-lg text-[#191919] dark:text-[#e4e4e4]/80"
+            className="text-sm text-center my-3 md:text-md lg:text-lg text-[#191919] dark:text-[#e4e4e4]/80"
           >
             Rizki Ardi | Web Developer
           </motion.p>

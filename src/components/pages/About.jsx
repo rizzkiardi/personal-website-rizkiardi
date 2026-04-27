@@ -176,7 +176,7 @@ const About = () => {
                 />
                 <img
                   src={assets.rizkiardi_img}
-                  className="rounded-full max-md:w-[200px]"
+                  className="rounded-full max-md:w-[200px] rounded-full max-md:w-[200px] ring-2 ring-slate-300/70 ring-offset-4 ring-offset-white dark:ring-offset-slate-900"
                   alt="Picture rizkiardi"
                   width="250"
                   loading="eager"
@@ -188,7 +188,7 @@ const About = () => {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="flex items-center gap-3 my-5"
+              className="flex items-center gap-3 my-5 max-md:w-[200px] max-md:justify-center md:w-[250px] md:justify-center"
             >
               <a
                 href="mailto:rizkiseptiardy@gmail.com"
@@ -257,7 +257,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-md text-start underline decoration decoration-[#F6A32D] text-[#191919] dark:text-[#e4e4e4]/80"
             >
-              Web Developer | Undergraduate Information Technology
+              Full Stack Web Developer | Building Modern Web Applications
             </motion.h2>
 
             <motion.div

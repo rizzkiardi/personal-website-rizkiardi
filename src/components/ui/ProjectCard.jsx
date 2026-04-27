@@ -68,7 +68,7 @@ const ProjectCard = ({
             <img
               src={src}
               alt={`${nameProjects} screenshot ${index + 1}`}
-              className="object-cover w-full h-full rounded-lg"
+              className="object-cover w-full h-full rounded-lg transform transition-transform duration-1000 hover:scale-110"
               loading="lazy"
               onClick={() => handleOpenModal(src)}
               onMouseEnter={handleMouseEnter}

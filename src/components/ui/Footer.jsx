@@ -10,7 +10,7 @@ const Footer = () => {
       <footer className="text-[#191919] dark:text-[#e4e4e4]/80">
         <div className="relative max-w-6xl mx-auto mt-10 py-3 text-sm border-t border-[#E4E4E4]/80 max-lg:mx-6">
           <div className="flex justify-start items-center my-5 gap-5">
-            <div className="border-r-2 border-[#E4E4E4]/80 pr-5">
+            <div className="border-r-2 border-[#F6A32D] pr-5">
               <p className="">&copy; Copyright - {new Date().getFullYear()}</p>
               <p>built in Yogyakarta</p>
             </div>
