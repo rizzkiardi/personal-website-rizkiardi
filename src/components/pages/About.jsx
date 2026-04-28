@@ -176,7 +176,7 @@ const About = () => {
                 />
                 <img
                   src={assets.rizkiardi_img}
-                  className="rounded-full max-md:w-[200px] rounded-full max-md:w-[200px] ring-2 ring-slate-300/70 ring-offset-4 ring-offset-white dark:ring-offset-slate-900"
+                  className="rounded-full max-md:w-[200px] ring-2 ring-slate-300/70 ring-offset-4 ring-offset-white dark:ring-offset-slate-900"
                   alt="Picture rizkiardi"
                   width="250"
                   loading="eager"
@@ -267,12 +267,12 @@ const About = () => {
               className="my-5 text-center font-semibold"
             >
               <p className="text-md max-lg:text-sm font-thin leading-7 text-start text-[#191919] dark:text-[#e4e4e4]/80">
-                I am a Bachelor of Information Technology graduate from the
-                University of Muhammadiyah Purworejo (GPA 3.49) with a passion
-                for technology and a proven commitment to delivering impactful
-                digital solutions. With expertise in React.js and Laravel,
-                supported by strong skills in HTML, CSS, and JavaScript. I
-                specialize in building modern, and responsive web applications.
+                Full Stack Web Developer with a Bachelor’s degree in Information
+                Technology (GPA 3.49) from the University of Muhammadiyah
+                Purworejo and over 2 years of experience building modern,
+                responsive web applications using React, NextJS, and Laravel,
+                supported by strong skills in HTML, CSS, JavaScript, and
+                Tailwind CSS, including REST API integration.
               </p>
             </motion.div>
 
@@ -411,11 +411,13 @@ const About = () => {
                     <span className="">Job Description</span>
                   </summary>{" "}
                   <p>
-                    Developing backend applications using various Google Cloud
-                    services, while learning the application of machine learning
-                    in a cloud environment. In addition, actively building
-                    personal branding through relevant and professional content
-                    on LinkedIn.
+                    Develop backend applications using various Google Cloud
+                    services, and implement and learn machine learning in a
+                    cloud environment through a Capstone Project. Participate in
+                    system development, cloud service integration, and
+                    application deployment. Build your personal brand by
+                    creating and publishing relevant professional content on
+                    LinkedIn.
                   </p>
                 </details>
               </div>
@@ -429,7 +431,7 @@ const About = () => {
 
               {/* Dicoding */}
               <div
-                className="mt-5 flex flex-col gap-3 lg:mt-0 lg:flex-1"
+                className="max-lg:mt-13 flex flex-col gap-3 lg:mt-0 lg:flex-1"
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="400"
@@ -469,14 +471,13 @@ const About = () => {
                     <span className="">Job Description</span>
                   </summary>{" "}
                   <p>
-                    Pelatihan Pengembang Front-End Web dan Back-End 2023
-                    Independent Study learns HTML, CSS, and JavaScript from
-                    basic to advanced level for Web Application development.
-                    There are soft skills such as Personal Productivity, Growth
-                    Mindset, Communication and Networking, Personal Branding,
-                    and Interview Communication. At the end of the study, we
-                    worked on a capstone project, creating the MentalWell
-                    Application, an online psychological counseling platform.
+                    I learned HTML, CSS, and JavaScript from basic to advanced
+                    levels for web application development. Covered soft skills
+                    such as personal productivity, growth mindset, communication
+                    and networking, personal branding, and interview
+                    communication. At the end of our studies, we worked on a
+                    final project: developing the MentalWell application, an
+                    online psychological counseling platform.
                   </p>
                 </details>
               </div>
@@ -501,7 +502,7 @@ const About = () => {
               </h2>
 
               <div className="work-card my-5 md:w-[85%] lg:w-[70%] text-[#e4e4e4]/80 dark:text-[#e4e4e4]/80">
-                {/* Astra Daihatsu Motor */}
+                {/* Wesclic Indonesia Neotech */}
                 <div
                   className="flex flex-col md:flex-row md:items-center md:justify-between gap-3"
                   data-aos="fade-up"
@@ -510,7 +511,70 @@ const About = () => {
                   data-aos-once="true"
                 >
                   {/* Kiri */}
-                  <div className="flex gap-3 items-start md:items-center w-full md:w-auto">
+                  <div className="flex gap-3 items-center w-full md:w-auto">
+                    <div className="w-[75px] max-md:w-[150px] md:w-[200px] p-4">
+                      <img
+                        src={assets.wesclic_logo}
+                        alt="Logo Wesclic Indonesia Neotech"
+                        className="w-[75px] max-md:w-[150px] md:w-[200px]"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <p className="text-md font-semibold">
+                        PT Wesclic Indonesia Neotech
+                      </p>
+                      <p className="text-sm mb-1">Web Developer</p>
+
+                      {/* Years untuk mobile */}
+                      <p className="text-sm mt-1 md:hidden">
+                        November 2025 - Present
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Kanan (hanya muncul di desktop) */}
+                  <div>
+                    <p className="text-sm hidden md:block md:mb-6">
+                      November 2025 - Present
+                    </p>
+                  </div>
+                </div>
+                {/* description */}
+                <div
+                  className=""
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  data-aos-once="true"
+                >
+                  <details className="group">
+                    <summary className="flex cursor-pointer items-center gap-2 list-none">
+                      <span className="transition-transform duration-500 group-open:rotate-90">
+                        ▶
+                      </span>
+                      <span className="">Job Description</span>
+                    </summary>
+                    <p className="">
+                      Develop and implement web application features using
+                      React, NextJS, and Tailwind CSS with a modular, reusable
+                      component architecture. Integrate the frontend with a
+                      Laravel-based REST API for data management and
+                      client–server communication, and translate UI/UX designs
+                      into clean, responsive code.
+                    </p>
+                  </details>
+                </div>
+
+                {/* Astra Daihatsu Motor */}
+                <div
+                  className="mt-13 flex flex-col md:flex-row md:items-center md:justify-between gap-3"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  data-aos-once="true"
+                >
+                  {/* Kiri */}
+                  <div className="flex gap-3 items-start max-md:items-center md:items-center w-full md:w-auto">
                     <img
                       src={assets.daihatsu_logo}
                       alt="Logo Astra Daihatsu Motor"
@@ -526,7 +590,7 @@ const About = () => {
 
                       {/* Years untuk mobile */}
                       <p className="text-sm mt-1 md:hidden">
-                        Maret 2018 - February 2020
+                        March 2018 - February 2020
                       </p>
                     </div>
                   </div>
@@ -576,31 +640,34 @@ const About = () => {
                       <span className="">Job Description</span>
                     </summary>
                     <p className="">
-                      Assembly Plant 2 is responsible for assembling several
-                      vehicle models, including Daihatsu Xenia, Toyota Avanza,
-                      Daihatsu Luxio, and Daihatsu GrandMax. I am assigned to
-                      the front left door installation section and actively
-                      contribute by submitting improvement suggestions through
-                      the Suggestion System program in my work area at PT Astra
-                      Daihatsu Motor.
+                      Assembly Plant 2 is an assembly area for several vehicle
+                      models, such as Daihatsu Xenia, Toyota Avanza, Daihatsu
+                      Luxio, and Daihatsu GrandMax. Work as a member of the
+                      production team, responsible for installing the front-left
+                      door in accordance with the established SOP. Collaborate
+                      with the team to ensure assembly quality and actively
+                      provide suggestions for improvements and innovations that
+                      support workplace safety and enhance the production
+                      process at PT Astra Daihatsu Motor.
                     </p>
                   </details>
                 </div>
 
                 {/* Yamaha */}
                 <div
-                  className="mt-10 flex flex-col  md:flex-row md:justify-between md:items-center gap-3"
+                  className="mt-13 flex flex-col  md:flex-row md:justify-between md:items-center gap-3"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="400"
                   data-aos-once="true"
                 >
                   {/* Kiri */}
-                  <div className="flex gap-3 items-start md:items-center w-full md:w-auto">
+                  <div className="flex gap-3 items-start max-md:items-center md:items-center w-full md:w-auto">
                     <img
                       src={assets.yamaha_logo}
                       alt="Logo Yamaha Motor"
                       className="w-[75px] max-md:w-[150px] md:w-[200px]"
+                      // className="w-[150px]"
                     />
                     <div className="flex flex-col">
                       <p className="text-md font-semibold">
@@ -661,10 +728,13 @@ const About = () => {
                       <span className="">Job Description</span>
                     </summary>
                     <p className="">
-                      Engine Assy is a place to assemble motorcycle engines. I
-                      work in the N-Max 155 motorcycle engine assembly section.
-                      Especially the installation of the Engine Case fan. Ensure
-                      that the engine Case fan is properly installed.
+                      The engine assembly is part of the Yamaha motorcycle
+                      engine assembly. Work as a Production Operator for the
+                      Yamaha N-Max 155 engine assembly team, focusing on
+                      installing the engine fan case. Collaborate with the
+                      production team to ensure the assembly process runs
+                      according to SOP and guarantees that components are
+                      installed properly and meet quality standards.
                     </p>
                   </details>
                 </div>

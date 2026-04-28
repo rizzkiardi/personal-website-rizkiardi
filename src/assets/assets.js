@@ -41,6 +41,7 @@ import rizkiardi_transparent_webp from "./images/rizkiardi-transparent.webp";
 import hacktiv8_logo from "./images/hacktiv8-logo.jpg";
 import dicoding_logo from "./images/dicoding_logo.jpg";
 import bangkit_logo from "./images/bangkit_academy_logo.jpg";
+import wesclic_logo from "./images/wesclic-indonesia-neotech.webp";
 import daihatsu_logo from "./images/Daihatsu-logo.png";
 import yamaha_logo from "./images/YamahaMotor-logo.png";
 import hacktiv8_certificate from "/certificates/Sertifikat IBM Wave 5 - Rizki Septi Ardi.pdf";
@@ -103,6 +104,7 @@ export const assets = {
   hacktiv8_logo,
   dicoding_logo,
   bangkit_logo,
+  wesclic_logo,
   daihatsu_logo,
   yamaha_logo,
   hacktiv8_certificate,
