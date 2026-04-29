@@ -257,7 +257,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-md text-start underline decoration decoration-[#F6A32D] text-[#191919] dark:text-[#e4e4e4]/80"
             >
-              Full Stack Web Developer | Building Modern Web Applications
+              Web Developer | Building Modern Web Applications
             </motion.h2>
 
             <motion.div
@@ -267,12 +267,12 @@ const About = () => {
               className="my-5 text-center font-semibold"
             >
               <p className="text-md max-lg:text-sm font-thin leading-7 text-start text-[#191919] dark:text-[#e4e4e4]/80">
-                Full Stack Web Developer with a Bachelor’s degree in Information
-                Technology (GPA 3.49) from the University of Muhammadiyah
-                Purworejo and over 2 years of experience building modern,
-                responsive web applications using React, NextJS, and Laravel,
-                supported by strong skills in HTML, CSS, JavaScript, and
-                Tailwind CSS, including REST API integration.
+                Web Developer with a Bachelor’s degree in Information Technology
+                (GPA 3.49) from the University of Muhammadiyah Purworejo and
+                over 2 years of experience building modern, responsive web
+                applications using React, NextJS, and Laravel, supported by
+                strong skills in HTML, CSS, JavaScript, and Tailwind CSS,
+                including REST API integration.
               </p>
             </motion.div>
 

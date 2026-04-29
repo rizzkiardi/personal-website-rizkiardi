@@ -106,7 +106,8 @@ const Navbar = () => {
             <li>
               <a
                 href="/Resume - Rizki Septi Ardi.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative flex text-[#191919] dark:text-[#e4e4e4]/80 after:content-[''] after:absolute after:left-[3px] after:bottom-[3px] after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:scale-x-100"
               >
                 <img
