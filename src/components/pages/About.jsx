@@ -11,6 +11,7 @@ import Footer from "../ui/Footer";
 import Navbar from "../ui/Navbar";
 import { GitHubCalendar } from "react-github-calendar";
 import { ShieldCheck } from "lucide-react";
+import PixelSnow from "../PixelSnow";
 
 const myCertificate = [
   {
@@ -146,10 +147,27 @@ const About = () => {
         {/* shadow */}
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 rounded-full bg-gradient-to-b from-white/10 to-transparent blur-3xl"></div>
 
-        <Particles
+        {/* <Particles
           className="absolute inset-0 -z-10"
           color={isDark ? "#ffffff" : "#191919"}
-        />
+        /> */}
+
+        <div className="absolute inset-0 -z-10">
+          <PixelSnow
+            color={isDark ? "#ffffff" : "#ffffff"}
+            flakeSize={0.05}
+            minFlakeSize={1.25}
+            pixelResolution={500}
+            speed={0.1}
+            density={0.1}
+            direction={125}
+            brightness={isDark ? "0.1" : "5"}
+            depthFade={3}
+            farPlane={10}
+            gamma={0.5}
+            variant="square"
+          />
+        </div>
 
         <div className="about max-w-6xl mx-auto my-20 flex flex-col-2 gap-6 items-center justify-center text-[#e4e4e4]/80 md:flex max-md:flex-col max-lg:px-6">
           {/* Gambar profile animate */}
