@@ -61,14 +61,14 @@ const Home = () => {
 
       <div className="absolute inset-0 -z-10">
         <PixelSnow
-          color={isDark ? "#ffffff" : "#ffffff"}
+          color={isDark ? "#fafafa" : "#fafafa"}
           flakeSize={0.05}
           minFlakeSize={1.25}
           pixelResolution={500}
           speed={0.1}
           density={0.1}
           direction={125}
-          brightness={isDark ? "0.1" : "5"}
+          brightness={isDark ? 0.1 : 5}
           depthFade={3}
           farPlane={10}
           gamma={0.5}

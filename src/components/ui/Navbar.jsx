@@ -35,8 +35,10 @@ const Navbar = () => {
   return (
     <div className="font-GeneralSans-Regular fixed top-0 left-0 right-0 z-50 px-6 py-4 text-[#191919] dark:text-[#e4e4e4]/80">
       <div
-        className={`font-GeneralSans-Regular fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${
-          scrolled ? "backdrop-blur bg-white/5 shadow-md" : "bg-transparent"
+        className={`font-GeneralSans-Regular fixed top-0 left-0 right-0 z-50 px-6 py-3 transition-all duration-300 ${
+          scrolled
+            ? "backdrop-blur max-md:w-[80%] md:w-[80%] lg:max-w-[950px] mx-auto mt-3 rounded-r-full rounded-l-full bg-white/5 shadow-md"
+            : "bg-transparent"
         }`}
       >
         <nav className="container max-w-6xl mx-auto flex items-center">
@@ -140,12 +142,12 @@ const Navbar = () => {
       <nav>
         <ul
           className={`flex flex-col gap-3 md:hidden py-10 px-4 fixed top-0 left-0 w-full h-screen bg-[#e4e4e4] dark:bg-[#191919] z-40 transform transition-transform duration-500 
-            ${isOpen ? "translate-y-14" : "-translate-y-full"}`}
+            ${isOpen ? "translate-y-0" : "-translate-y-full"}`}
         >
           <li>
             <Link
               to="/"
-              className="block hover:text-[#191919] hover:bg-[#191919]/10 dark:hover:bg-white/6 dark:hover:text-[#FFFFFF] hover:rounded-sm py-2 px-2"
+              className="mt-10 block hover:text-[#191919] hover:bg-[#191919]/10 dark:hover:bg-white/6 dark:hover:text-[#FFFFFF] hover:rounded-sm py-2 px-2"
               onClick={closeMenu}
             >
               Home
