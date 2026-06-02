@@ -10,7 +10,6 @@ import "./styles/nprogress.css";
 NProgress.configure({
   speed: 500,
   trickleSpeed: 500,
-  // minimum: 1,
   showSpinner: false,
 });
 

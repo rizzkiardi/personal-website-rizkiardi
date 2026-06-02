@@ -7,19 +7,19 @@ import react from "./icons/React.png";
 import github_light from "./icons/github-light.png";
 import github_dark from "./icons/github-dark.png";
 import typescript from "./icons/TypeScript.png";
-import nextjs from "./icons/Nextjs.png";
-import nextjs_white from "./icons/nextjs-white.png";
+import nextjs from "./icons/NextJS.png";
 import laravel from "./icons/Laravel.png";
+import mysql from "./icons/MySQL.png";
 import eye_light from "./icons/eye-light.svg";
 import eye_dark from "./icons/eye-dark.svg";
 import cross_orange from "./icons/cross-orange.png";
 
 import download_light from "./icons/download-line-light.png";
 import download_dark from "./icons/download-line-dark.png";
+import dev from "./icons/dev.png";
 import logo_light from "./images/logo-rizkiardi-light.png";
 import logo_dark from "./images/logo-rizkiardi-dark.png";
-import rizkiardi_img from "./images/rizkiardi.png";
-import rizkiardi_img_webp from "./images/rizkiardi.webp";
+import rizkiardi_about from "./images/rizkiardi.webp";
 import ppdb1 from "./images/ppdb-1.webp";
 import ppdb2 from "./images/ppdb-2.png";
 import ppdb3 from "./images/ppdb-3.png";
@@ -36,8 +36,7 @@ import js_documentation from "./images/JS Documentation-layout.png";
 import tokobit from "./images/TokoBit-app.png";
 import linkedin_light from "./icons/LinkedIn-light.png";
 import linkedin_dark from "./icons/LinkedIn-dark.png";
-import rizkiardi_transparent from "./images/rizkiardi-transparent.png";
-import rizkiardi_transparent_webp from "./images/rizkiardi-transparent.webp";
+import rizkiardi_hero from "./images/rizkiardi-transparent.webp";
 import hacktiv8_logo from "./images/hacktiv8-logo.jpg";
 import dicoding_logo from "./images/dicoding_logo.jpg";
 import bangkit_logo from "./images/bangkit_academy_logo.jpg";
@@ -47,20 +46,21 @@ import yamaha_logo from "./images/YamahaMotor-logo.png";
 import hacktiv8_certificate from "/certificates/Sertifikat IBM Wave 5 - Rizki Septi Ardi.pdf";
 import bangkit_certificate from "/certificates/[Bangkit 2024 Batch 2] Certificate - C264B4KY3916.webp";
 import sib_certificate from "/certificates/[SIB Cycle 5] Sertifikat - F264YB259.webp";
+import wesclic_certificate from "/certificates/Sertifikat Maganghub - Wesclic Indonesia Neotech - Rizki Septi Ardi.webp";
 import adm_certificate from "/certificates/ADM.webp";
 import yimm_certificate from "/certificates/YIMM.webp";
 
-import sertifikat_dasar_pemrograman from "./images/Sertifikat - Memulai Dasar Pemrograman untuk Menjadi Pengembang Software.jpg";
+import sertifikat_dasar_pemrograman from "./images/Sertifikat - Memulai Dasar Pemrograman untuk Menjadi Pengembang Software.webp";
 import sertifikat_solo_learn from "./images/CERTIFICATE Solo Learn - Web Development.jpg";
-import sertifikat_machine_learning from "./images/Sertifikat - Belajar Penerapan Machine Learning dengan Google Cloud.jpg";
-import sertifikat_aplikasi_backend from "./images/Sertifikat - Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud.jpg";
-import sertifikat_dasar_js from "./images/Sertifikat - Belajar Dasar Pemrograman Javascript.jpg";
-import sertifikat_dasar_git from "./images/Sertifikat - Belajar Dasar Git dengan GitHub.jpg";
-import sertifikat_dasar_web from "./images/Sertifikat - Belajar Dasar Pemrograman Web.jpg";
+import sertifikat_machine_learning from "./images/Sertifikat - Belajar Penerapan Machine Learning dengan Google Cloud.webp";
+import sertifikat_aplikasi_backend from "./images/Sertifikat - Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud.webp";
+import sertifikat_dasar_js from "./images/Sertifikat - Belajar Dasar Pemrograman Javascript.webp";
+import sertifikat_dasar_git from "./images/Sertifikat - Belajar Dasar Git dengan GitHub.webp";
+import sertifikat_dasar_web from "./images/Sertifikat - Belajar Dasar Pemrograman Web.webp";
 import sertifikat_freecodecamp_responsive from "./images/CERTIFICATE freecodecamp - Responsive Web Design.png";
-import sertifikat_fe_pemula from "./images/Sertifikat - Belajar Membuat Front End Web Pemula.jpg";
-import sertifikat_fundamental_fe_web from "./images/Sertifikat - Belajar Fundamental Front-End Web Development.jpg";
-import sertifikat_fe_expert from "./images/Sertifikat - Menjadi Front-End Web Developer Expert.jpg";
+import sertifikat_fe_pemula from "./images/Sertifikat - Belajar Membuat Front End Web Pemula.webp";
+import sertifikat_fundamental_fe_web from "./images/Sertifikat - Belajar Fundamental Front-End Web Development.webp";
+import sertifikat_fe_expert from "./images/Sertifikat - Menjadi Front-End Web Developer Expert.webp";
 import sertifikat_IBM from "./images/Sertifikat IBM Wave 5.jpg";
 
 export const assets = {
@@ -74,12 +74,12 @@ export const assets = {
   react,
   typescript,
   nextjs,
-  nextjs_white,
   laravel,
+  mysql,
   download_light,
   download_dark,
-  rizkiardi_img,
-  rizkiardi_img_webp,
+  dev,
+  rizkiardi_about,
 
   ppdb1,
   ppdb2,
@@ -99,8 +99,7 @@ export const assets = {
   github_dark,
   linkedin_light,
   linkedin_dark,
-  rizkiardi_transparent,
-  rizkiardi_transparent_webp,
+  rizkiardi_hero,
   hacktiv8_logo,
   dicoding_logo,
   bangkit_logo,
@@ -110,6 +109,7 @@ export const assets = {
   hacktiv8_certificate,
   bangkit_certificate,
   sib_certificate,
+  wesclic_certificate,
   adm_certificate,
   yimm_certificate,
   eye_light,
@@ -161,15 +161,15 @@ export const technology = [
   },
   {
     name: "NextJS",
-    img: assets.nextjs_white,
+    img: assets.nextjs,
   },
   {
     name: "Laravel",
     img: assets.laravel,
   },
   {
-    name: "GitHub",
-    img: assets.github_light,
+    name: "MySQL",
+    img: assets.mysql,
   },
 ];
 

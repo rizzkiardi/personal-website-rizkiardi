@@ -1,17 +1,22 @@
 import { assets } from "@/assets/assets";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/animate-ui/components/radix/accordion";
 import { Marquee } from "@/components/magicui/marquee";
-import { darkMode } from "@/hooks/darkMode";
+import { useDarkMode } from "@/hooks/useDarkMode";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import { ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import { Particles } from "../magicui/particles";
+import { GitHubCalendar } from "react-github-calendar";
+import PixelSnow from "../PixelSnow";
 import CertificateModal from "../ui/CertificateModal";
 import Footer from "../ui/Footer";
 import Navbar from "../ui/Navbar";
-import { GitHubCalendar } from "react-github-calendar";
-import { ShieldCheck } from "lucide-react";
-import PixelSnow from "../PixelSnow";
 
 const myCertificate = [
   {
@@ -132,7 +137,7 @@ const MyCertificateCard = ({ name, img }) => {
 };
 
 const About = () => {
-  const isDark = darkMode();
+  const isDark = useDarkMode();
 
   const [showCertificate, setShowCertificate] = useState(false);
   const [activeCertificate, setActiveCertificate] = useState(null);
@@ -146,11 +151,6 @@ const About = () => {
       <main className="relative">
         {/* shadow */}
         <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 rounded-full bg-gradient-to-b from-white/10 to-transparent blur-3xl"></div>
-
-        {/* <Particles
-          className="absolute inset-0 -z-10"
-          color={isDark ? "#ffffff" : "#191919"}
-        /> */}
 
         <div className="absolute inset-0 -z-10">
           <PixelSnow
@@ -183,23 +183,13 @@ const About = () => {
               }}
               className="relative rounded-full"
             >
-              <picture>
-                <source
-                  srcSet={assets.rizkiardi_img_webp}
-                  type="image/webp"
-                  className="rounded-full max-md:w-[200px]"
-                  alt="Picture rizkiardi"
-                  width="250"
-                  loading="eager"
-                />
-                <img
-                  src={assets.rizkiardi_img}
-                  className="rounded-full max-md:w-[200px] ring-2 ring-slate-300/70 ring-offset-4 ring-offset-white dark:ring-offset-slate-900"
-                  alt="Picture rizkiardi"
-                  width="250"
-                  loading="eager"
-                />
-              </picture>
+              <img
+                src={assets.rizkiardi_about}
+                className="rounded-full max-md:w-[200px] ring-2 ring-slate-300/70 ring-offset-4 ring-offset-white dark:ring-offset-slate-900"
+                alt="Picture rizkiardi"
+                width="250"
+                loading="eager"
+              />
             </motion.div>
 
             <motion.div
@@ -215,16 +205,15 @@ const About = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
+                  width={30}
+                  height={30}
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-mail-icon lucide-mail"
-                  className="text-black dark:text-[#FFFFFF]"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-mail-icon lucide-mail text-black dark:text-[#FFFFFF]"
                 >
                   <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
                   <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -275,7 +264,8 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-md text-start underline decoration decoration-[#F6A32D] text-[#191919] dark:text-[#e4e4e4]/80"
             >
-              Web Developer | Building Modern Web Applications
+              Web Developer | Frontend Web Developer | Building Modern Web
+              Applications
             </motion.h2>
 
             <motion.div
@@ -287,7 +277,7 @@ const About = () => {
               <p className="text-md max-lg:text-sm font-thin leading-7 text-start text-[#191919] dark:text-[#e4e4e4]/80">
                 Web Developer with a Bachelor’s degree in Information Technology
                 (GPA 3.49) from the University of Muhammadiyah Purworejo and
-                over 2 years of experience building modern, responsive web
+                over 1 year of experience building modern, responsive web
                 applications using React, NextJS, and Laravel, supported by
                 strong skills in HTML, CSS, JavaScript, and Tailwind CSS,
                 including REST API integration.
@@ -339,7 +329,7 @@ const About = () => {
                   className="w-[50px] transition-transform duration-300 hover:scale-120"
                 />
                 <img
-                  src={assets.nextjs_white}
+                  src={assets.nextjs}
                   alt="Logo Next JS"
                   className="w-[50px] transition-transform duration-300 hover:scale-120"
                 />
@@ -351,6 +341,11 @@ const About = () => {
                 <img
                   src={assets.laravel}
                   alt="Logo Laravel"
+                  className="w-[50px] transition-transform duration-300 hover:scale-120"
+                />
+                <img
+                  src={assets.mysql}
+                  alt="Logo MySQL"
                   className="w-[50px] transition-transform duration-300 hover:scale-120"
                 />
               </div>
@@ -371,10 +366,10 @@ const About = () => {
         </div>
 
         {/* Start MSIB */}
-        <section className="w-full bg-[#2D2D2D] py-20">
+        <section className="w-full bg-[#ECEEF0] dark:bg-[#2D2D2D] py-20">
           <div className="max-w-6xl mx-auto max-lg:px-6">
             <h2
-              className="text-white text-2xl font-semibold text-start underline decoration-2 decoration-[#F6A32D]
+              className="text-[#191919] dark:text-white text-2xl font-semibold text-start underline decoration-2 decoration-[#F6A32D]
             "
               data-aos="fade-up"
               data-aos-duration="1000"
@@ -401,17 +396,19 @@ const About = () => {
                   />
 
                   <div className="flex flex-col">
-                    <p className="text-md font-semibold">
+                    <p className="text-[#191919] dark:text-white text-md font-semibold">
                       Bangkit Academy 2024 Batch 2 - Cloud Computing Cohort
                     </p>
-                    <p className="text-sm mb-1">Student</p>
+                    <p className="text-[#191919] dark:text-white text-sm mb-1">
+                      Student
+                    </p>
                     <div className="flex lg:items-center gap-3 max-md:flex max-md:flex-col">
-                      <p className="text-sm mt-1">
+                      <p className="text-[#191919] dark:text-white text-sm mt-1">
                         August 2024 - December 2024
                       </p>
                       <button
                         onClick={() => setActiveCertificate("bangkit")}
-                        className="flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm rounded-sm hover:shadow-lg shadow-lg transition-transform hover:scale-105 cursor-pointer border border-[#434444]"
+                        className="text-[#191919] dark:text-white flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm rounded-sm hover:shadow-md shadow-md transition-transform hover:scale-105 cursor-pointer border border-slate-300"
                       >
                         <ShieldCheck color="#F6A32D" />
                         Certificate
@@ -421,23 +418,30 @@ const About = () => {
                 </div>
 
                 {/* description */}
-                <details className="group mb-5 ">
-                  <summary className="flex cursor-pointer items-center gap-2 list-none">
-                    <span className=" transition-transform duration-500 group-open:rotate-90">
-                      ▶
-                    </span>
-                    <span className="">Job Description</span>
-                  </summary>{" "}
-                  <p>
-                    Develop backend applications using various Google Cloud
-                    services, and implement and learn machine learning in a
-                    cloud environment through a Capstone Project. Participate in
-                    system development, cloud service integration, and
-                    application deployment. Build your personal brand by
-                    creating and publishing relevant professional content on
-                    LinkedIn.
-                  </p>
-                </details>
+                <div
+                  className="border-b border-slate-300"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="400"
+                  data-aos-once="true"
+                >
+                  <Accordion type="single" collapsible className="">
+                    <AccordionItem value="job-description">
+                      <AccordionTrigger className="text-[#191919] dark:text-white text-sm">
+                        Job Description
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[#191919] dark:text-white text-sm">
+                        Develop backend applications using various Google Cloud
+                        services, and implement and learn machine learning in a
+                        cloud environment through a Capstone Project.
+                        Participate in system development, cloud service
+                        integration, and application deployment. Build your
+                        personal brand by creating and publishing relevant
+                        professional content on LinkedIn.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </div>
               </div>
               {activeCertificate === "bangkit" && (
                 <CertificateModal
@@ -463,15 +467,19 @@ const About = () => {
                     className="w-[100px] md:w-[125px]"
                   />
                   <div className="flex flex-col">
-                    <p className="text-md font-semibold">
+                    <p className="text-[#191919] dark:text-white text-md font-semibold">
                       Pengembang FrontEnd Web dan BackEnd
                     </p>
-                    <p className="text-sm mb-1">Student</p>
+                    <p className="text-[#191919] dark:text-white text-sm mb-1">
+                      Student
+                    </p>
                     <div className="flex lg:items-center gap-3 max-md:flex max-md:flex-col">
-                      <p className="text-sm mt-1">July 2023 - December 2023</p>
+                      <p className="text-[#191919] dark:text-white text-sm mt-1">
+                        July 2023 - December 2023
+                      </p>
                       <button
                         onClick={() => setActiveCertificate("sib")}
-                        className="flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm rounded-sm hover:shadow-lg shadow-lg transition-transform hover:scale-105 cursor-pointer border border-[#434444]"
+                        className="text-[#191919] dark:text-white flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm rounded-sm hover:shadow-md shadow-md transition-transform hover:scale-105 cursor-pointer border border-slate-300"
                       >
                         <ShieldCheck color="#F6A32D" />
                         Certificate
@@ -481,23 +489,32 @@ const About = () => {
                 </div>
 
                 {/* description */}
-                <details className="group mb-5">
-                  <summary className="flex cursor-pointer items-center gap-2 list-none">
-                    <span className="transition-transform duration-500 group-open:rotate-90">
-                      ▶
-                    </span>
-                    <span className="">Job Description</span>
-                  </summary>{" "}
-                  <p>
-                    I learned HTML, CSS, and JavaScript from basic to advanced
-                    levels for web application development. Covered soft skills
-                    such as personal productivity, growth mindset, communication
-                    and networking, personal branding, and interview
-                    communication. At the end of our studies, we worked on a
-                    final project: developing the MentalWell application, an
-                    online psychological counseling platform.
-                  </p>
-                </details>
+                <div
+                  className="border-b border-slate-300"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="400"
+                  data-aos-once="true"
+                >
+                  <Accordion type="single" collapsible className="">
+                    <AccordionItem value="job-description">
+                      <AccordionTrigger className="text-[#191919] dark:text-white text-sm">
+                        Job Description
+                      </AccordionTrigger>
+
+                      <AccordionContent className="text-[#191919] dark:text-white text-sm">
+                        I learned HTML, CSS, and JavaScript from basic to
+                        advanced levels for web application development. Covered
+                        soft skills such as personal productivity, growth
+                        mindset, communication and networking, personal
+                        branding, and interview communication. At the end of our
+                        studies, we worked on a final project: developing the
+                        MentalWell application, an online psychological
+                        counseling platform.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                </div>
               </div>
               {activeCertificate === "sib" && (
                 <CertificateModal
@@ -511,7 +528,7 @@ const About = () => {
             {/* Work Experience */}
             <div className="mt-20">
               <h2
-                className="text-white text-2xl font-semibold text-start underline decoration-2 decoration-[#F6A32D]"
+                className="text-[#191919] dark:text-white text-2xl font-semibold text-start underline decoration-2 decoration-[#F6A32D]"
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-once="true"
@@ -538,49 +555,74 @@ const About = () => {
                       />
                     </div>
                     <div className="flex flex-col">
-                      <p className="text-md font-semibold">
+                      <p className="text-[#191919] dark:text-white text-md font-semibold">
                         PT Wesclic Indonesia Neotech
                       </p>
-                      <p className="text-sm mb-1">Web Developer</p>
+                      <p className="text-[#191919] dark:text-white text-sm mb-1">
+                        Web Developer
+                      </p>
 
                       {/* Years untuk mobile */}
-                      <p className="text-sm mt-1 md:hidden">
-                        November 2025 - Present
+                      <p className="text-[#191919] dark:text-white text-sm mt-1 md:hidden">
+                        November 2025 - May 2026
                       </p>
                     </div>
                   </div>
 
-                  {/* Kanan (hanya muncul di desktop) */}
+                  {/* Kanan (muncul di desktop) */}
                   <div>
-                    <p className="text-sm hidden md:block md:mb-6">
-                      November 2025 - Present
+                    <p className="text-[#191919] dark:text-white text-sm hidden md:block md:mb-6">
+                      November 2025 - May 2026
                     </p>
                   </div>
                 </div>
-                {/* description */}
                 <div
-                  className=""
+                  className="md:ml-[214px] md:mt-[-32px]"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="300"
                   data-aos-once="true"
                 >
-                  <details className="group">
-                    <summary className="flex cursor-pointer items-center gap-2 list-none">
-                      <span className="transition-transform duration-500 group-open:rotate-90">
-                        ▶
-                      </span>
-                      <span className="">Job Description</span>
-                    </summary>
-                    <p className="">
-                      Develop and implement web application features using
-                      React, NextJS, and Tailwind CSS with a modular, reusable
-                      component architecture. Integrate the frontend with a
-                      Laravel-based REST API for data management and
-                      client–server communication, and translate UI/UX designs
-                      into clean, responsive code.
-                    </p>
-                  </details>
+                  <button
+                    onClick={() => setActiveCertificate("wesclic")}
+                    className="text-[#191919] dark:text-white flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm rounded-sm hover:shadow-md shadow-md transition-transform hover:scale-105 cursor-pointer border border-slate-300"
+                  >
+                    <ShieldCheck color="#F6A32D" />
+                    Certificate
+                  </button>
+                  {activeCertificate === "wesclic" && (
+                    <CertificateModal
+                      src={assets.wesclic_certificate}
+                      isOpen={true}
+                      onClose={() => setActiveCertificate(null)}
+                    />
+                  )}
+                </div>
+                {/* description */}
+                <div
+                  className="border-b border-slate-300"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  data-aos-once="true"
+                >
+                  {/* description */}
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value="job-description">
+                      <AccordionTrigger className="text-[#191919] dark:text-white text-sm">
+                        Job Description
+                      </AccordionTrigger>
+
+                      <AccordionContent className="text-[#191919] dark:text-white text-sm">
+                        Develop and implement web application features using
+                        React, NextJS, and Tailwind CSS with a modular, reusable
+                        component architecture. Integrate the frontend with a
+                        Laravel-based REST API for data management and
+                        client–server communication, and translate UI/UX designs
+                        into clean, responsive code.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
 
                 {/* Astra Daihatsu Motor */}
@@ -599,15 +641,15 @@ const About = () => {
                       className="w-[75px] max-md:w-[150px] md:w-[200px]"
                     />
                     <div className="flex flex-col">
-                      <p className="text-md font-semibold">
+                      <p className="text-[#191919] dark:text-white text-md font-semibold">
                         PT Astra Daihatsu Motor
                       </p>
-                      <p className="text-sm mb-1">
+                      <p className="text-[#191919] dark:text-white text-sm mb-1">
                         Team Member - Assembly Plant 2
                       </p>
 
                       {/* Years untuk mobile */}
-                      <p className="text-sm mt-1 md:hidden">
+                      <p className="text-[#191919] dark:text-white text-sm mt-1 md:hidden">
                         March 2018 - February 2020
                       </p>
                     </div>
@@ -615,7 +657,7 @@ const About = () => {
 
                   {/* Kanan (hanya muncul di desktop) */}
                   <div>
-                    <p className="text-sm hidden md:block md:mb-6">
+                    <p className="text-[#191919] dark:text-white text-sm hidden md:block md:mb-6">
                       Maret 2018 - February 2020
                     </p>
                   </div>
@@ -629,7 +671,7 @@ const About = () => {
                 >
                   <button
                     onClick={() => setActiveCertificate("adm")}
-                    className="flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm mb-3 rounded-sm hover:shadow-lg shadow-lg transition-transform hover:scale-105 cursor-pointer border border-[#434444]"
+                    className="text-[#191919] dark:text-white flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm rounded-sm hover:shadow-md shadow-md transition-transform hover:scale-105 cursor-pointer border border-slate-300"
                   >
                     <ShieldCheck color="#F6A32D" />
                     Certificate
@@ -644,31 +686,30 @@ const About = () => {
                 </div>
                 {/* description */}
                 <div
-                  className=""
+                  className="border-b border-slate-300"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="300"
                   data-aos-once="true"
                 >
-                  <details className="group">
-                    <summary className="flex cursor-pointer items-center gap-2 list-none">
-                      <span className="transition-transform duration-500 group-open:rotate-90">
-                        ▶
-                      </span>
-                      <span className="">Job Description</span>
-                    </summary>
-                    <p className="">
-                      Assembly Plant 2 is an assembly area for several vehicle
-                      models, such as Daihatsu Xenia, Toyota Avanza, Daihatsu
-                      Luxio, and Daihatsu GrandMax. Work as a member of the
-                      production team, responsible for installing the front-left
-                      door in accordance with the established SOP. Collaborate
-                      with the team to ensure assembly quality and actively
-                      provide suggestions for improvements and innovations that
-                      support workplace safety and enhance the production
-                      process at PT Astra Daihatsu Motor.
-                    </p>
-                  </details>
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value="job-description">
+                      <AccordionTrigger className="text-[#191919] dark:text-white text-sm">
+                        Job Description
+                      </AccordionTrigger>
+                      <AccordionContent className="text-[#191919] dark:text-white text-sm">
+                        Assembly Plant 2 is an assembly area for several vehicle
+                        models, such as Daihatsu Xenia, Toyota Avanza, Daihatsu
+                        Luxio, and Daihatsu GrandMax. Work as a member of the
+                        production team, responsible for installing the
+                        front-left door in accordance with the established SOP.
+                        Collaborate with the team to ensure assembly quality and
+                        actively provide suggestions for improvements and
+                        innovations that support workplace safety and enhance
+                        the production process at PT Astra Daihatsu Motor.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
 
                 {/* Yamaha */}
@@ -688,13 +729,13 @@ const About = () => {
                       // className="w-[150px]"
                     />
                     <div className="flex flex-col">
-                      <p className="text-md font-semibold">
+                      <p className="text-[#191919] dark:text-white text-md font-semibold">
                         PT Yamaha Indonesia Motor Mfg.
                       </p>
-                      <p className="text-sm mb-1">
+                      <p className="text-[#191919] dark:text-white text-sm mb-1">
                         Production Operator - Engine Assy Production
                       </p>
-                      <p className="text-sm mt-1 md:hidden">
+                      <p className="text-[#191919] dark:text-white text-sm mt-1 md:hidden">
                         January 2015 - December 2016
                       </p>
                     </div>
@@ -702,7 +743,7 @@ const About = () => {
 
                   {/* Kanan (hanya muncul di desktop) */}
                   <div>
-                    <p className="text-sm hidden md:block md:mb-6">
+                    <p className="text-[#191919] dark:text-white text-sm hidden md:block md:mb-6">
                       January 2015 - December 2016
                     </p>
                   </div>
@@ -716,7 +757,7 @@ const About = () => {
                 >
                   <button
                     onClick={() => setActiveCertificate("yimm")}
-                    className="flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm mb-3 rounded-sm hover:shadow-lg shadow-lg transition-transform hover:scale-105 cursor-pointer border border-[#434444]"
+                    className="text-[#191919] dark:text-white flex justify-center items-center gap-1 py-1 px-3 w-[125px] text-sm rounded-sm hover:shadow-md shadow-md transition-transform hover:scale-105 cursor-pointer border border-slate-300"
                   >
                     <ShieldCheck color="#F6A32D" />
                     Certificate
@@ -729,32 +770,31 @@ const About = () => {
                     />
                   )}
                 </div>
-
                 {/* description */}
                 <div
-                  className="mb-5"
+                  className="border-b border-slate-300 mb-5"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="400"
                   data-aos-once="true"
                 >
-                  <details className="group mb-5 ">
-                    <summary className="flex cursor-pointer items-center gap-2 list-none">
-                      <span className=" transition-transform duration-500 group-open:rotate-90">
-                        ▶
-                      </span>
-                      <span className="">Job Description</span>
-                    </summary>
-                    <p className="">
-                      The engine assembly is part of the Yamaha motorcycle
-                      engine assembly. Work as a Production Operator for the
-                      Yamaha N-Max 155 engine assembly team, focusing on
-                      installing the engine fan case. Collaborate with the
-                      production team to ensure the assembly process runs
-                      according to SOP and guarantees that components are
-                      installed properly and meet quality standards.
-                    </p>
-                  </details>
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value="job-description">
+                      <AccordionTrigger className="text-[#191919] dark:text-white text-sm">
+                        Job Description
+                      </AccordionTrigger>
+
+                      <AccordionContent className="text-[#191919] dark:text-white text-sm">
+                        The engine assembly is part of the Yamaha motorcycle
+                        engine assembly. Work as a Production Operator for the
+                        Yamaha N-Max 155 engine assembly team, focusing on
+                        installing the engine fan case. Collaborate with the
+                        production team to ensure the assembly process runs
+                        according to SOP and guarantees that components are
+                        installed properly and meet quality standards.
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
               </div>
             </div>

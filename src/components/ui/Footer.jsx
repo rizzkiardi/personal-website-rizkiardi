@@ -1,9 +1,9 @@
 import { assets } from "@/assets/assets";
-import { darkMode } from "@/hooks/darkMode";
+import { useDarkMode } from "@/hooks/useDarkMode";
 import { Link } from "react-router";
 
 const Footer = () => {
-  const isDark = darkMode();
+  const isDark = useDarkMode();
 
   return (
     <div className="font-GeneralSans-Regular">

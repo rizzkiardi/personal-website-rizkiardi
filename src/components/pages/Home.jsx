@@ -3,16 +3,15 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Marquee } from "../magicui/marquee";
-import { Particles } from "../magicui/particles";
 import { ShimmerButton } from "../magicui/shimmer-button";
+import PixelSnow from "../PixelSnow";
+import { AnimatedShinyText } from "../ui/animated-shiny-text";
 import Footer from "../ui/Footer";
 import Navbar from "../ui/Navbar";
 import ProjectCard from "../ui/ProjectCard";
-import PixelSnow from "../PixelSnow";
 
 const Home = () => {
   const [isDark, setIsDark] = useState(false);
-
   useEffect(() => {
     const observer = () => {
       setIsDark(document.documentElement.classList.contains("dark"));
@@ -34,9 +33,9 @@ const Home = () => {
           "relative h-full w-fit sm:w-36 cursor-pointer overflow-hidden rounded-xl px-3 max-sm:gap-[1px]",
         )}
       >
-        <div className="flex flex-col border border-[#e4e4e4]/20 rounded-sm py-2 px-2 items-center gap-2 max-sm:space-x-[5px]">
+        <div className="flex flex-col  py-2 px-2 items-center gap-2 max-sm:space-x-[5px]">
           <img className="" width="75" alt={name} src={img} />
-          <p className="text-sm font-medium text-[#e4e4e4]/80 dark:text-[#e4e4e4]/80">
+          <p className="text-sm font-medium text-[#191919] dark:text-[#e4e4e4]/80">
             {name}
           </p>
         </div>
@@ -54,11 +53,6 @@ const Home = () => {
       {/* shadow */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 rounded-full bg-gradient-to-b from-white/10 to-transparent blur-3xl"></div>
 
-      {/* <Particles
-        className="absolute inset-0 -z-10"
-        color={isDark ? "#ffffff" : "#191919"}
-      /> */}
-
       <div className="absolute inset-0 -z-10">
         <PixelSnow
           color={isDark ? "#fafafa" : "#fafafa"}
@@ -75,33 +69,21 @@ const Home = () => {
           variant="square"
         />
       </div>
-
-      <div className="hero relative container max-w-6xl mx-auto flex max-md:flex-col md:flex-row-reverse items-center justify-center text-[#e4e4e4]/80 pb-10 pt-5 max-md:mb-10 max-md:mt-0 my-10">
+      <div className="hero relative container min-h-screen max-w-6xl mx-auto flex max-md:flex-col md:flex-row-reverse items-center justify-center text-[#e4e4e4]/80 pb-10 pt-5">
         <div className="w-[40%] max-md:w-full md:mb-20 ">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            // whileInView={{ scale: 1 }}
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-            className=""
           >
-            <picture>
-              <source
-                srcSet={assets.rizkiardi_transparent_webp}
-                type="image/webp"
-                className="rounded-full max-md:mt-[25px] mb-[5px] mx-auto max-md:w-[300px]"
-                alt="Picture rizkiardi"
-                width="750"
-                loading="eager"
-              />
-              <img
-                src={assets.rizkiardi_transparent}
-                className="rounded-full max-md:mt-[25px] mb-[5px] mx-auto max-md:w-[300px]"
-                alt="Picture rizkiardi"
-                width="750"
-                loading="eager"
-              />
-            </picture>
+            <img
+              src={assets.rizkiardi_hero}
+              className="rounded-full max-md:mt-[25px] mb-[5px] mx-auto max-md:w-[300px]"
+              alt="Picture rizkiardi"
+              width="750"
+              loading="eager"
+              fetchPriority="high"
+            />
           </motion.div>
           <motion.p
             initial={{ y: -20, opacity: 0 }}
@@ -109,7 +91,10 @@ const Home = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm text-center my-3 md:text-md lg:text-lg text-[#191919] dark:text-[#e4e4e4]/80"
           >
-            Rizki Ardi | Web Developer
+            <AnimatedShinyText className="flex gap-2 justify-center items-center">
+              <img src={assets.dev} alt="Icon Developer" />
+              Rizki Ardi | Web Developer
+            </AnimatedShinyText>
           </motion.p>
         </div>
 
@@ -118,30 +103,35 @@ const Home = () => {
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="my-5 text-center  md:text-start"
+            className="my-5 text-4xl text-center  md:text-start"
           >
-            <h1 className="text-4xl lg:mb-5">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-gray-400 text-3xl md:text-4xl lg:text-5xl xl:text-6xl dark:from-[#FFFFFF]/90 dark:to-gray-500">
-                Designing and Developing Scalable,
-              </span>
-            </h1>
-            <h1 className="text-4xl">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-gray-400 text-3xl md:text-4xl lg:text-5xl xl:text-6xl dark:from-[#FFFFFF]/90 dark:to-gray-500">
-                High-Quality Web Applications
-              </span>
-            </h1>
+            <span className="sr-only">
+              Designing and Developing Scalable, High-Quality Web Applications
+            </span>
+
+            <span
+              aria-hidden="true"
+              className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-gray-400 text-3xl md:text-4xl lg:mb-5 lg:text-5xl xl:text-6xl dark:from-[#FFFFFF]/90 dark:to-gray-500"
+            >
+              Designing and Developing Scalable,
+            </span>
+
+            <span
+              aria-hidden="true"
+              className="block text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-gray-400 text-3xl md:text-4xl lg:text-5xl xl:text-6xl dark:from-[#FFFFFF]/90 dark:to-gray-500"
+            >
+              High-Quality Web Applications
+            </span>
           </motion.h1>
 
           <motion.p
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-5 mb-10 max-md:mb-10 lg:my-10 text-center md:text-start "
+            className="mt-5 mb-10 text-sm text-center md:text-start my-3 md:text-md lg:text-lg text-[#191919] dark:text-[#e4e4e4]/80 max-md:mb-10 lg:my-10"
           >
-            <p className="text-sm text-center md:text-start my-3 md:text-md lg:text-lg text-[#191919] dark:text-[#e4e4e4]/80">
-              Transforming code into scalable web applications using React,
-              Next.js, and AI technologies.
-            </p>
+            Transforming code into scalable web applications using React,
+            Next.js, and AI technologies.
           </motion.p>
 
           <div className="flex max-md:justify-center md:flex-row items-center md:items-start gap-5 md:gap-7">
@@ -187,13 +177,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <main className="">
+      <main>
         {/* Start Technology Stack*/}
-        <section className="relative technology w-full bg-[#2D2D2D]">
+        <section className="relative technology w-full bg-[#ECEEF0] dark:bg-[#2D2D2D]">
           <div className="tech-stack container max-w-6xl mx-auto py-10">
             <h2
-              className="text-white text-2xl font-semibold pt-[30px] pb-[20px] max-lg:px-6"
+              className="text-[#191919] dark:text-white text-2xl font-semibold pt-[30px] pb-[20px] max-lg:px-6"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-once="true"
@@ -215,8 +204,8 @@ const Home = () => {
                   ))}
                 </div>
               </Marquee>
-              <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#2d2d2d]"></div>
-              <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#2d2d2d]"></div>
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#ECEEF0] dark:from-[#2D2D2D]"></div>
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#ECEEF0] dark:from-[#2D2D2D]"></div>
             </div>
             {/* marque */}
           </div>
@@ -267,7 +256,6 @@ const Home = () => {
         </section>
         {/* End My Projects */}
       </main>
-
       <Footer />
     </div>
   );

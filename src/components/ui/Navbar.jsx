@@ -3,10 +3,10 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
 import HamburgerMenu from "./HamburgerMenu";
-import { darkMode } from "@/hooks/darkMode";
+import { useDarkMode } from "@/hooks/useDarkMode";
 
 const Navbar = () => {
-  const isDark = darkMode();
+  const isDark = useDarkMode();
   // Preloader
   const [scrolled, setScrolled] = useState(false);
 

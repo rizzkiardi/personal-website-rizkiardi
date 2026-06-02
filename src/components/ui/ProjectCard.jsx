@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { assets } from "@/assets/assets";
 import { motion, AnimatePresence } from "framer-motion";
-import { darkMode } from "@/hooks/darkMode";
+import { useDarkMode } from "@/hooks/useDarkMode";
 
 const ProjectCard = ({
   img,
@@ -15,7 +15,7 @@ const ProjectCard = ({
   linkGithub,
   livePreview,
 }) => {
-  const isDark = darkMode();
+  const isDark = useDarkMode();
 
   const swiperRef = useRef(null);
   const hoverTimerRef = useRef(null);
