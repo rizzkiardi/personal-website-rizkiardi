@@ -7,7 +7,7 @@ import react from "./icons/React.png";
 import github_light from "./icons/github-light.png";
 import github_dark from "./icons/github-dark.png";
 import typescript from "./icons/TypeScript.png";
-import nextjs from "./icons/nextjs.png";
+import nextjs from "./icons/next-js.png";
 import laravel from "./icons/Laravel.png";
 import mysql from "./icons/MySQL.png";
 import eye_light from "./icons/eye-light.svg";
